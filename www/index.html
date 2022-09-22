@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Reservas</title>
+  </head>
+
+  <body>
+    <div class="panel">
+      <div class="titulo">
+        <p>
+          Reservas - Equipo
+          <span class="equipo" id="equipo">
+            <!-- JS modifica el nombre del equipo  -->
+            meine
+          </span>
+        </p>
+      </div>
+
+      <div class="cartel">
+        <p class="cartel__pelicula">Película: Un, dos, tres</p>
+        <p class="cartel__director">Director: Billy Wilder</p>
+        <p class="cartel__cine">Cine Paraíso</p>
+        <p class="cartel__sala">Sala 17</p>
+        <p class="cartel__hora">Hora: 19:00</p>
+        <p class="cartel__fecha">Fecha: 13/11</p>
+        <p class="cartel__precio">
+          Precio:
+          <span class="cartel__precio-cantidad" id="precio">7</span> euros
+        </p>
+      </div>
+
+      <ul class="leyendas">
+        <li class="leyendas__item">
+          <div class="asiento"></div>
+          <p class="leyendas__leyenda">Libre</p>
+        </li>
+        <li class="leyendas__item">
+          <div class="asiento asiento--seleccionado"></div>
+          <p class="leyendas__leyenda">Seleccionado</p>
+        </li>
+        <li class="leyendas__item">
+          <div class="asiento asiento--ocupado"></div>
+          <p class="leyendas__leyenda">Ocupado</p>
+        </li>
+      </ul>
+
+      <div class="sala">
+        <div class="sala__pantalla"></div>
+        <div class="sala__aforo" id="aforo">
+          <!-- JS añade los asientos del aforo -->
+          <!-- Los asientos pueden ser de tres tipos: ocupados, seleccionados y libres  -->
+          <!-- El tipo de asiento se identifica mediante class -->
+          <!-- <div class="asiento asiento--ocupado"></div>
+               <div class="asiento asiento--seleccionado"></div>
+               <div class="asiento"></div> -->
+        </div>
+      </div>
+
+      <div class="reserva">
+        <!-- JS modifica los contenidos de los elementos span -->
+        <div>
+          Asientos:
+          <span class="reserva__dato-numerico" id="contador">0</span>
+        </div>
+        <div>
+          Total:
+          <span class="reserva__dato-numerico" id="total">000€</span>
+        </div>
+      </div>
+      <div class="controles">
+        <button class="controles__boton" id="cancelar">Cancelar</button>
+        <button class="controles__boton" id="pagar">Pagar</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
